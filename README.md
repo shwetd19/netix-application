@@ -1,34 +1,18 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In the project directory, to run this project run:
 
-## Available Scripts
+Install all the npm packages. Go into the project folder and type the following command to install all npm packages
 
-In the project directory, you can run:
+```bash
+npm install
+```
 
-### `npm start`
+In order to run the application Type the following command
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
+```bash
+npm start
+```
 
 ## Component Breakdown
 The `ImageBox` component represents a box containing an image and title. The main component, `App`, renders a collection of `ImageBox` components.
