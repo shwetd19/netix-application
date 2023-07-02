@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Image Gallery With JSON
 
 In the project directory, to run this project run:
 
