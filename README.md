@@ -29,15 +29,27 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Component Breakdown
+The `ImageBox` component represents a box containing an image and title. The main component, `App`, renders a collection of `ImageBox` components.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## State Management
+The `App` component uses the `useState` hook to manage two states: `loadedImages` and `selectedImage`. The `loadedImages` state keeps track of the positions of images that have been loaded, and the `selectedImage` state holds the URL of the currently selected image.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Image Loading and Click Handling
+The `ImageBox` component receives the necessary props to handle image loading and click events. It utilizes the `loadedImages` state to determine if the image is loaded and displays a spinner while the image is being loaded. Clicking on an `ImageBox` triggers the `handleImageClick` function, which sets the `selectedImage` state to the URL of the clicked image.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Image Close Functionality
+The `handleCloseImage` function is called when the overlay is clicked, and it sets the `selectedImage` state to `null`, effectively closing the overlay.
+
+## useEffect for Key Event Handling
+The `useEffect` hook is used to add and remove an event listener for the `keydown` event. When the escape key (key code 27) is pressed, the `handleCloseImage` function is called to close the currently displayed image.
+
+## Rendering Components
+The `App` component renders a collection of `ImageBox` components by mapping over the `Records` array. The first three records are displayed in the first row, while the remaining records are displayed in the second row.
+
+## Overlay Display
+If the `selectedImage` state is not `null`, an overlay is displayed with the selected image in a larger view. Clicking on the overlay triggers the `handleCloseImage` function to close the overlay.
 
 ## Learn More
 
